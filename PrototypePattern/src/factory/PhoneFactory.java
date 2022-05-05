@@ -2,7 +2,12 @@ package factory;
 
 import interfaces.Phone;
 import java.util.ArrayList;
-
+/**
+ * PhoneFactory represents our factory
+ * 
+ * @author Mihaela
+ *
+ */
 public class PhoneFactory {
 	// Atribut pentru pastrarea evidentei telefoanelor clonate
     public ArrayList<Phone> clonedPhonesList = new ArrayList<Phone>();
@@ -16,9 +21,16 @@ public class PhoneFactory {
     public void setClonedPhonesList(ArrayList<Phone> clonedPhonesList) {
         this.clonedPhonesList = clonedPhonesList;
     }
-
+    
     public PhoneFactory() { }
 
+    /**
+     * Cloning an Apple product or a Samsung product from Apple and Samsung class
+     * @param phone 
+     * the Apple or Samsung product
+     * @return
+     * @throws CloneNotSupportedException
+     */
     // Metoda pentru clonarea unui telefon ce apeleaza metoda makeClone() implementata
     // in clasa fiecarei companii de telefoane mobile (Apple, Samsung etc.)
     public Phone CreateClone(Phone phone) throws CloneNotSupportedException {
@@ -28,12 +40,20 @@ public class PhoneFactory {
         return phoneCopy;
     }
 
+    /**
+     * Adding the product after it has been cloned in the factory list of the cloned products
+     * @param clonedPhone 
+     * the clone of the products
+     */
     // Metoda pentru adaugarea unui telefon clonat in lista de telefoane clonate
     public void AddCloneToFactory(Phone clonedPhone) {
         System.out.println("Added cloned phone to list: " + clonedPhone.toString());
         this.clonedPhonesList.add(clonedPhone);
     }
 
+    /**
+     * Display the list of cloned products 
+     */
     // Metoda pentru afisarea listei de telefoane clonate
     public void PrintClonedPhones() {
     	System.out.println("List of cloned phones:");

@@ -2,6 +2,12 @@ package companies;
 
 import interfaces.Phone;
 
+	/**
+	 * Samsung represents one of the company from our factory
+	 * 
+	 * @author Mihaela 
+	 *
+	 */
 public class Samsung implements Phone {
 	private String capacity;
     private String color;
@@ -11,6 +17,17 @@ public class Samsung implements Phone {
     // Constructor implicit
     public Samsung() { }
 
+    /**
+     * Constructs and initializes the characteristics for a Samsung product
+     * @param capacity 
+     * a characteristic of a Samsung product
+     * @param color 
+     * a characteristic of a Samsung product
+     * @param price 
+     * a characteristic of a Samsung product
+     * @param model 
+     * a characteristic of a Samsung product
+     */
     // Constructor explicit
     public Samsung(String capacity, String color, double price, String model) {
         this.capacity = capacity;
@@ -19,6 +36,9 @@ public class Samsung implements Phone {
         this.model = model;
     }
 
+    /**
+     * Cloning a Samsung product
+     */
     // Metoda pentru clonarea unui telefon Samsung
     public Phone makeClone() throws CloneNotSupportedException {
     	//System.out.println("I will clone a Samsung phone");
@@ -71,6 +91,9 @@ public class Samsung implements Phone {
         this.color = color;
     }
     
+    /**
+     * Display the info about a Samsung product
+     */
     // Metoda pentru afisarea datelor unui obiect Samsung
     public String toString() {
         return "Samsung [Capacity = " + this.capacity + ", Color = " + this.color + ", Price = " + this.price + ", Model = " + this.model + "]";
