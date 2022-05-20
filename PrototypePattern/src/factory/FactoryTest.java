@@ -18,8 +18,8 @@ class FactoryTest {
 		 * test the set and get methods
 		 */
 		Apple apl = new Apple();
-		apl.setColor("red");
-		apl.getColor();
+		apl.setColor("red");	
+		assertEquals("red",apl.getColor());
 		
 		/**
 		 * creating a Samsung product
@@ -27,12 +27,13 @@ class FactoryTest {
 		 */
 		Samsung smsg = new Samsung();
 		smsg.setModel("S21");
-		smsg.getModel();
+		assertEquals("S21",smsg.getModel());
 		
 		/**
 		 * creating a clone
 		 */
 		Phone phoneCopy = apl.makeClone();
+		assertEquals(true,phoneCopy instanceof Phone);
 		
 		
 		
